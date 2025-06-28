@@ -9,7 +9,11 @@
  * @returns {boolean} - האם יש חפיפה בין הטווחים
  */
 function isDateRangeOverlap(start1, end1, start2, end2) {
-  return !(end1 < start2 || start1 > end2);
+  const s1 = new Date(start1);
+  const e1 = new Date(end1);
+  const s2 = new Date(start2);
+  const e2 = new Date(end2);
+  return !(e1 < s2 || s1 > e2);
 }
 
 /**
@@ -27,12 +31,12 @@ function checkAvailability(listingId, startDate, endDate) {
   //      - חיפוש הזמנות עם listingId זה
   //      - שימוש ב-isDateRangeOverlap להשוואה בין טווחים
   // להחזיר false אם יש חפיפה, true אם פנוי
-  const keys = Object.keys(localStorage).filter(k => k.endsWith('_bookings'));
+  const keys = Object.keys(localStorage).filter(k => k.startsWith('bookings_'));
   for (const key of keys) {
     const bookings = JSON.parse(localStorage.getItem(key));
     for (const booking of bookings) {
       if (
-        booking.listingId === listingId &&
+        String(booking.listingId) === String(listingId) &&
         isDateRangeOverlap(startDate, endDate, booking.startDate, booking.endDate)
       ) {
         return false;

@@ -13,8 +13,10 @@
   <script src="js/storage.js" defer></script>
   <script src="js/auth.js" defer></script>
   <script defer>
-    checkLoggedIn();
-    console.log(amsterdam);
+    document.addEventListener('DOMContentLoaded', () => {
+      checkLoggedIn();
+      console.log(amsterdam);
+    });
   </script>
   <script src="js/rent.js" defer></script>
 </head>
