@@ -50,3 +50,64 @@
   border: 1px solid #ccc;
   border-radius: 10px;
 }
+
+.filter-box label {
+  font-weight: 600;
+}
+
+.favorite-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.favorite-btn.active {
+  color: red;
+}
+
+.favorite-btn:hover {
+  color: darkred;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rating-filter {
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.rating-filter i {
+  transition: transform 0.2s;
+}
+
+.rating-filter i:hover {
+  transform: scale(1.2);
+}
+
+#starFilter i {
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s, transform 0.2s;
+}
+
+#starFilter i:hover {
+  transform: scale(1.2);
+}
+
+#starFilter i.active {
+  color: gold;
+}
+
+#priceRange {
+  width: 100%;
+  accent-color: #007bff;
+}
