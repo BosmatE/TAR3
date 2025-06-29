@@ -14,7 +14,9 @@
   <script src="js/auth.js" defer></script>
   <script src="js/bookings.js" defer></script>
   <script defer>
-    checkLoggedIn();
+    document.addEventListener('DOMContentLoaded', () => {
+      checkLoggedIn();
+    });
   </script>
 </head>
 

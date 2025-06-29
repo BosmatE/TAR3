@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     card.innerHTML = `
       <div class="card h-100 shadow-sm p-3">
         <h5 class="card-title">${apartment.name}</h5>
-        <img src="${apartment.picture_url}" alt="Apartment" class="card-img-top thumb mb-2" />
+        <img src="${apartment.picture_url}" alt="Apartment" class="booking-image mb-2" />
         <p class="card-text"><strong>From:</strong> ${b.startDate}</p>
         <p class="card-text"><strong>To:</strong> ${b.endDate}</p>
         <div class="d-flex justify-content-between align-items-center mt-3">
