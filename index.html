@@ -26,7 +26,8 @@
 <body>
   <nav class="navbar navbar-expand-sm navbar-light fixed-top custom-navbar">
     <a class="navbar-brand" href="index.html">🏠Rent-It</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -74,12 +75,12 @@
       <div class="form-row">
 
         <div class="col-md-4 mb-2">
-          <label>⭐ דירוג מינימלי</label>
+          <label>⭐ Minimum Rating</label>
           <div id="starFilter" class="star-rating"></div>
         </div>
 
         <div class="col-md-4 mb-2">
-          <label for="priceRange">💰 טווח מחיר</label>
+          <label for="priceRange">💰 Price Range</label>
           <div class="d-flex align-items-center">
             <input type="range" id="priceRange" min="0" max="10000" step="10" value="1000" />
             <span id="priceRangeValue" class="ml-2">Up to $1000</span>
@@ -87,9 +88,9 @@
         </div>
 
         <div class="col-md-4 mb-2">
-          <label for="rooms">🛏️ מספר חדרים</label>
+          <label for="rooms">🛏️ Number of Rooms</label>
           <select id="rooms" class="form-control">
-            <option value="">כל כמות</option>
+            <option value="">Any</option>
           </select>
         </div>
 

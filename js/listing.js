@@ -60,7 +60,7 @@ function renderListings(listingsArray) {
 
   pageListings.forEach(listing => {
     const favorites = JSON.parse(localStorage.getItem(`favorites_${username}`)) || [];
-    const isFav = favorites.includes(listing.listing_id);
+    const isFav = favorites.map(String).includes(String(listing.listing_id));
     const heartClass = isFav ? 'favorite-btn active' : 'favorite-btn';
 
     const card = document.createElement('div');
@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const roomsSelect = document.getElementById('rooms');
   const bedroomCounts = [...new Set(amsterdam.map(l => parseInt(l.bedrooms)).filter(n => !isNaN(n)))].sort((a, b) => a - b);
 
-  roomsSelect.innerHTML = '<option value="">כל כמות</option>';
+  roomsSelect.innerHTML = '<option value="">Any</option>';
   bedroomCounts.forEach(num => {
     const opt = document.createElement('option');
     opt.value = num;

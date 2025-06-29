@@ -49,10 +49,12 @@ body {
 
 .booking-card img.thumb {
   width: 100%;
-  max-height: 200px;
+  max-width: 100%;
+  height: auto;
   object-fit: cover;
   border-radius: 6px;
   margin: 10px 0;
+  display: block;
 }
 
 .booking-card button {
@@ -104,7 +106,9 @@ body {
 
 .booking-image {
   width: 100%;
-  height: 200px;
+  max-width: 100%;
+  height: auto;
   object-fit: cover;
   border-radius: 6px;
+  display: block;
 }

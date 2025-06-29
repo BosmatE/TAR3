@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Render details
   document.getElementById('apartmentDetails').innerHTML = `
     <h2>${apartment.name}</h2>
-    <img src="${apartment.picture_url}" alt="Apartment" />
+    <img src="${apartment.picture_url}" alt="Apartment" class="apartment-image" />
     <p>${apartment.description}</p>
     <p><strong>Price:</strong> ${apartment.price}</p>
     <p><strong>Rating:</strong> ${apartment.review_scores_rating || 'N/A'}</p>
